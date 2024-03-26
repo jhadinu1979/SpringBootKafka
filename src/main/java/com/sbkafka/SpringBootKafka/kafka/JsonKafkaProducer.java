@@ -24,7 +24,8 @@ public class JsonKafkaProducer {
 	
 	public void SendMessage(User user) {
 		LOGGER.info("Message Send: ", user.toString());
-		Message<User> message = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC, "JavaProgram").build();
+		//Message<User> message = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC, "JavaProgram").build();
+		Message<User> message = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC, "JsonJavaProgram").build();
 		kafkaTemplate.send(message);
 	}
 }

@@ -12,4 +12,10 @@ public class KafkaTopic {
 		return TopicBuilder.name("JavaProgram")
 				.build();
 	}
+	
+	@Bean 
+	public NewTopic jsonCreateTopics() {
+		return TopicBuilder.name("JsonJavaProgram")
+				.build();
+	}
 }
